@@ -3,6 +3,7 @@ import Logo from './components/MoonLogo/Logo';
 import DreamForm from './components/DeamForm/DeamForm';
 import DreamInterpretation from './components/DreamInterpretation/DreamInterpretation';
 import Preloader from './components/Preloader/Preloader';
+import Background from './components/Background/Background';
 
 
 function App() {
@@ -33,7 +34,7 @@ function App() {
     <>
       {isLoading && <Preloader />}
       
-      <div>
+      <Background>
         <div className="min-h-screen flex flex-col">
           <div className="flex-1 flex flex-col items-center justify-center py-12 sm:py-16 lg:py-20">
             <div className="mb-8 sm:mb-12 lg:mb-16">
@@ -49,7 +50,7 @@ function App() {
             <p>© 2026 DreamScan — где сны обретают голос</p>
           </footer>
         </div>
-      </div>
+      </Background>
     </>
   );
 }
