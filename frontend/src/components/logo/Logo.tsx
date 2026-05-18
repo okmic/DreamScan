@@ -8,7 +8,7 @@ interface LogoProps {
 }
 
 const Logo: React.FC<LogoProps> = ({ 
-  size = 'lg',
+  size = "lg",
   className = ''
 }) => {
   const [time, setTime] = useState(0);
