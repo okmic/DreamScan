@@ -11,9 +11,17 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.0",
+    "lucide-react": "^1.16.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
-    "tailwindcss": "^4.3.0"
+    "react-particles": "^2.12.2",
+    "tailwindcss": "^4.3.0",
+    "tsparticles-engine": "^2.12.0",
+    "tsparticles-move-base": "^2.12.0",
+    "tsparticles-shape-circle": "^2.12.0",
+    "tsparticles-updater-color": "^2.12.0",
+    "tsparticles-updater-opacity": "^2.12.0",
+    "tsparticles-updater-out-modes": "^2.12.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
