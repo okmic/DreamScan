@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Background from './components/Background/Background';
 import Logo from './components/MoonLogo/Logo';
 import DreamForm from './components/DeamForm/DeamForm';
 import DreamInterpretation from './components/DreamInterpretation/DreamInterpretation';
@@ -34,7 +33,7 @@ function App() {
     <>
       {isLoading && <Preloader />}
       
-      <Background>
+      <div>
         <div className="min-h-screen flex flex-col">
           <div className="flex-1 flex flex-col items-center justify-center py-12 sm:py-16 lg:py-20">
             <div className="mb-8 sm:mb-12 lg:mb-16">
@@ -50,7 +49,7 @@ function App() {
             <p>© 2026 DreamScan — где сны обретают голос</p>
           </footer>
         </div>
-      </Background>
+      </div>
     </>
   );
 }
