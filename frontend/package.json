@@ -1,5 +1,6 @@
 {
-  "name": "frontend",
+  "name": "dreamscan",
+  "homepage": "https://okmic.github.io/DreamScan",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,6 +8,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "deploy": "gh-pages -d build",
     "preview": "vite preview"
   },
   "dependencies": {

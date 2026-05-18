@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Logo from './components/MoonLogo/Logo';
 import DreamForm from './components/DeamForm/DeamForm';
 import DreamInterpretation from './components/DreamInterpretation/DreamInterpretation';
 import Preloader from './components/Preloader/Preloader';
@@ -35,7 +36,13 @@ function App() {
       <div>
         <div className="min-h-screen flex flex-col">
           <div className="flex-1 flex flex-col items-center justify-center py-12 sm:py-16 lg:py-20">
-
+            <div className="mb-8 sm:mb-12 lg:mb-16">
+              <Logo size="lg" />
+            </div>
+            
+            <DreamForm onSubmit={handleDreamSubmit} isLoading={isLoading} />
+            
+            <DreamInterpretation interpretation={interpretation} />
           </div>
           
           <footer className="text-center py-6 text-white/10 text-xs tracking-wider">
