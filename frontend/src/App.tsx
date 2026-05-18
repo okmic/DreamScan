@@ -36,10 +36,6 @@ function App() {
         <div className="min-h-screen flex flex-col">
           <div className="flex-1 flex flex-col items-center justify-center py-12 sm:py-16 lg:py-20">
 
-            
-            <DreamForm onSubmit={handleDreamSubmit} isLoading={isLoading} />
-            
-            <DreamInterpretation interpretation={interpretation} />
           </div>
           
           <footer className="text-center py-6 text-white/10 text-xs tracking-wider">
