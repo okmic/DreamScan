@@ -1,0 +1,18 @@
+@keyframes pulseStar {
+    0%, 100% { opacity: 0.1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.5); }
+}
+
+textarea::-webkit-scrollbar {
+    width: 4px;
+}
+
+textarea::-webkit-scrollbar-track {
+    background: rgba(251, 191, 36, 0.05);
+    border-radius: 4px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background: rgba(251, 191, 36, 0.3);
+    border-radius: 4px;
+}
