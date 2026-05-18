@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Background from './components/Background/Background';
-import Logo from './components/Logo/Logo';
+import Logo from './components/MoonLogo/Logo';
 import DreamForm from './components/DeamForm/DeamForm';
 import DreamInterpretation from './components/DreamInterpretation/DreamInterpretation';
 import Preloader from './components/Preloader/Preloader';
