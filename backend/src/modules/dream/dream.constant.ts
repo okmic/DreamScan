@@ -1,1 +1,1 @@
-export const PROMPT = ``
+export const DREAM_PROMPT = ``

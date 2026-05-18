@@ -7,7 +7,6 @@ export default class DreamModule {
     }
 
     private getRoutes(server: FastifyInstance){
-
         server.get('/api/dream', {
             handler: dreamController.dream,
         })
