@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  backend:
+    image: node:22-alpine
+    container_name: dreamscan-backend-dev
+    working_dir: /app
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=development
+      - PORT=3001
+    env_file:
+      - ./.env
+      - ./backend/temp.env
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    command: sh -c "yarn install && yarn server:dev"
+    networks:
+      - dreamscan-network
+
+  frontend:
+    image: node:22-alpine 
+    container_name: dreamscan-frontend-dev
+    working_dir: /app
+    ports:
+      - "5173:5173"
+    environment:
+      - NODE_ENV=development
+    env_file:
+      - ./.env
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+      - /app/build
+    command: sh -c "yarn install && yarn dev --host 0.0.0.0"
+    networks:
+      - dreamscan-network
+    depends_on:
+      - backend
+
+networks:
+  dreamscan-network:
+    driver: bridge

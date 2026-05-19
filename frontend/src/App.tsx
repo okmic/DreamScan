@@ -4,6 +4,7 @@ import DreamForm from './components/DeamForm/DeamForm';
 import DreamInterpretation from './components/DreamInterpretation/DreamInterpretation';
 import Preloader from './components/Preloader/Preloader';
 import Background from './components/Background/Background';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
       <Background>
         <div className="min-h-screen flex flex-col">
           <div className="flex-1 flex flex-col items-center justify-center py-12 sm:py-16 lg:py-20">
+
             <div className="mb-8 sm:mb-12 lg:mb-16">
               <Logo size="lg" />
             </div>
@@ -46,9 +48,7 @@ function App() {
             <DreamInterpretation interpretation={interpretation} />
           </div>
           
-          <footer className="text-center py-6 text-white/10 text-xs tracking-wider">
-            <p>© 2026 DreamScan — где сны обретают голос</p>
-          </footer>
+          <Footer />
         </div>
       </Background>
     </>

@@ -1,5 +1,5 @@
 import { FastifyReply } from "fastify";
-import { ErrorBadRequest, ErrorForbidden, ErrorNotAuth, ErrorUploadFile } from "../errors/errors";
+import { ErrorBadRequest, ErrorForbidden, ErrorNotAuth } from "../errors/errors";
 
 export const successResponse = async (msg: string, data: any, reply: FastifyReply, status: number = 200) => {
     return reply
@@ -17,7 +17,6 @@ export const errorResponse = async (error: any, reply: FastifyReply, alertMsg?: 
         .status(401)
         .send({errorMsg: 'NOT AUTH', error: { message: error.message }, alertMsg, errorData })
     }
-    
     if(error instanceof ErrorBadRequest) {
         return reply
         .status(400)
@@ -28,12 +27,6 @@ export const errorResponse = async (error: any, reply: FastifyReply, alertMsg?: 
         .status(403)
         .send({errorMsg: 'Forbidden', error: { message: error.message }, alertMsg, errorData })
     }
-    if(error instanceof ErrorUploadFile) {
-        return reply
-        .status(500)
-        .send({errorMsg: 'Error upload file', error: { message: error.message }, alertMsg, errorData })
-    }
-
     return reply
     .status(500)
     .send({state: 'Some error', error: { message: "Server error" }, alertMsg })
