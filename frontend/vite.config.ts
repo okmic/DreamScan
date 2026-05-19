@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/DreamScan/',
+  //base: '/DreamScan/',
   build: {
     outDir: './build',
     emptyOutDir: true
