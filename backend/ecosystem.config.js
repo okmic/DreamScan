@@ -1,7 +1,7 @@
 module.exports = {
   apps: [{
     name: 'dreamscan-backend',
-    script: './build/src/entrypoints/server.js',
+    script: './build/entrypoints/server.js',
     cwd: '/app/DreamScan/backend',
     instances: 1,
     exec_mode: 'fork',
