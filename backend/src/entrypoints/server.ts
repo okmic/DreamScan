@@ -6,6 +6,7 @@ import { setupGlobalErrorHandlers } from "../pkg/errors/error-handler"
 import appInstance from "../pkg/appInstance/appInstance"
 import DreamModule from "../modules/dream/dream.module"
 import PingModule from "../modules/ping/ping.module"
+import errorMiddleware from "../pkg/errors/error.middleware"
 
 (async () => {
   const server = fastify({ logger: true })
@@ -19,7 +20,8 @@ import PingModule from "../modules/ping/ping.module"
   appInstance.setApp(server)
   new PingModule(server)
   new DreamModule(server)
-
+  server.setErrorHandler(errorMiddleware)
+  
   try {
     setupGlobalErrorHandlers()
     await server.listen({

@@ -1,0 +1,9 @@
+export default {
+    backendUrl: "http://localhost:9999"
+}
+
+
+GATWAY_URI=http://localhost:9999
+GATWAY_PORT=9999
+Y_OAUTH_TOKEN="token"
+Y_X_FOLDER_ID="folderId"
